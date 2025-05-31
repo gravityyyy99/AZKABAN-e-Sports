@@ -1,0 +1,91 @@
+.header {
+    background: #111;
+    padding: 5px 10px; /* Reduced padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Reduced height */
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .logo-1-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .logo-1-link:hover {
+    transform: scale(1.1); /* Slightly scale up the logo on hover */
+  }
+  
+  .logo-1 {
+    width: 50px; /* Smaller logo size */
+    height: 50px; /* Ensure the logo is square */
+    object-fit: contain; /* Ensure the logo fits within the dimensions */
+  }
+  
+  nav {
+    display: flex;
+    gap: 15px; /* Reduced gap between links */
+    margin-left: auto; /* Push nav links to the right */
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* Smaller font size */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    position: relative;
+  }
+  
+  /* Hover Effect for Navigation Links */
+  nav a:hover {
+    color: #ff0000; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly scale up the link */
+  }
+  
+  /* Optional: Add an underline effect on hover */
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    transform: scaleX(1); /* Underline appears on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      height: 40px; /* Even smaller height for mobile */
+    }
+  
+    .logo-1 {
+      width: 40px; /* Even smaller logo for mobile */
+      height: 40px; /* Ensure the logo is square */
+    }
+  
+    nav {
+      gap: 10px; /* Reduced gap for mobile */
+    }
+  
+    nav a {
+      font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+  }
